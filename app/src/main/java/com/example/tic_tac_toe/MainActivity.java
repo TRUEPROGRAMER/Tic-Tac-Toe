@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Button spusti aktivitu MenaHracov
         button = (Button) findViewById(R.id.play_button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
     }
 
+    //Metóda pre button na prepojenie na aktivitu MenaHracov
     public void openMenaHracov() {
         Intent intent = new Intent(this, MenaHracov.class);
         startActivity(intent);

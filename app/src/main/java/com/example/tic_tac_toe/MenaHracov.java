@@ -18,7 +18,6 @@ public class MenaHracov extends AppCompatActivity {
         setContentView(R.layout.activity_mena_hracov);
 
         //Schovanie Status a Navigation baru
-
         decorView = getWindow().getDecorView();
         decorView.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
             @Override
@@ -29,6 +28,9 @@ public class MenaHracov extends AppCompatActivity {
             }
         });
 
+        //Priradenie mien pre playerOne a playerTwo a ich prenesenie na hraciu plochu
+        //Spustenie hry až po vyplnení mien pre hráčov
+        //V prípade nevyplnenia mien sa objaví upozornenie "Please enter player names!"
         final EditText playerOne = findViewById(R.id.playerOneName);
         final EditText playerTwo = findViewById(R.id.playerTwoName);
         final Button startGameButton = findViewById(R.id.startGameButton);
@@ -54,7 +56,7 @@ public class MenaHracov extends AppCompatActivity {
         });
     }
 
-    //Schovanie Status a Navigation baru
+    //Schovanie Status a Navigation baru / pokračovanie
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
